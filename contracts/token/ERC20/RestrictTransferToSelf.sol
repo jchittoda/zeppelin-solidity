@@ -9,7 +9,7 @@ import "./StandardToken.sol";
 contract RestrictTransferToSelf is StandardToken {
     
     function transfer(address _to, uint256 _value) public returns (bool) {
-		require(_to != address(this));
+        require(_to != address(this));
 
         return super.transfer(_to, _value);
     }
